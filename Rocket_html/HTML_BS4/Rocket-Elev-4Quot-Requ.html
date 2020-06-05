@@ -27,6 +27,20 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<style>
+			#residential{
+				display:none;
+			}
+			#commercial{
+				display:none;
+			}
+			#corporate{
+				display:none;
+			}
+			#hybride{
+				display:none;
+			}
+		</style>
 	</head>
 	<!--/HEAD-->
 
@@ -228,15 +242,16 @@
 					
 					<p><b><u>Please specify the type of building (Select only one option):</u></b></p>	
 			
-					<select id=Select>
+					<form method="post" action="traitement.php">
+						
+						   
+						<input type="radio" name="type" id="resi-chec" onclick="ResiFunc()"> <label for="resi-chec">Residential</label>
+						<input type="radio" name="type" id="comm-chec" onclick="CommFunc()"> <label for="comm-chec">Commerciall</label>
+						<input type="radio" name="type" id="corp-chec" onclick="CorpFunc()"> <label for="corp-chec">Corporatif</label>
+						<input type="radio" name="type" id="hybr-chec" onclick="HybrFunc()"> <label for="hybr-chec">Hybride</label>
 
-						<option>--- Select ---</option>
-						<option value="residential">Residential</option>
-						<option value="commercial">Commercial</option>
-						<option value="corporate">Corporate</option>
-						<option value="hybride">Hybride</option>
-					
-					</select>
+						
+					</form>
 					<form id="residential" class="type-of-building">
 						<p>
 						    </br></br><b><u>For residential building, please answer the following questions:</u></b><br/><br/>
@@ -482,9 +497,9 @@
 											<label for="contact_department">Department *</label>
 											<select class="form-control pointer" name="contact[department]">
 												<option value="">--- Select ---</option>
-												<option value="Marketing">Residential</option>
-												<option value="Webdesign">Corporate</option>
-												<option value="Architecture">Commercial</option>
+												<option value="Residential">Residential</option>
+												<option value="Corporate">Corporate</option>
+												<option value="Commercial">Commercial</option>
 											</select>
 										</div>
 										<div class="col-md-12">
@@ -721,13 +736,79 @@
 		
 		<!-- STYLESWITCHER - REMOVE -->
 		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<script>
+			
+			// Declare Variables:
+			var choice1 = document.getElementById("resi-chec");
+			var choice2 = document.getElementById("comm-chec");
+			var choice3 = document.getElementById("corp-chec");
+			var choice4 = document.getElementById("hybr-chec");
+
+			var show1 = document.getElementById("residential");
+			var show2 = document.getElementById("commercial");
+			var show3 = document.getElementById("corporate");		
+			var show4 = document.getElementById("hybride");
+			
+			
+			// IF Customer Chooses Residential Building
+			function ResiFunc() {
+
+				if ( choice1.checked === true )
+				   { show1.style.display = 'block';
+				   show2.style.display = 'none';
+				   show3.style.display = 'none';
+				   show4.style.display = 'none';
+				     
+				}
+				else { show1.style.display = 'none';
+				}
+			}
+
+			// IF Customer Chooses commercial Building
+			function CommFunc() {
+
+				if ( choice2.checked === true )
+				   { show2.style.display = 'block';
+				   show1.style.display = 'none';
+				   show3.style.display = 'none';
+				   show4.style.display = 'none';
+				}
+				else { show2.style.display = 'none';
+				   
+				}
+			}
+
+            // IF Customer Chooses Corporate Building
+			function CorpFunc() {
+	
+				if ( choice3.checked === true )
+				   { show3.style.display = 'block';
+				   show1.style.display = 'none';
+				   show2.style.display = 'none';
+				   show4.style.display = 'none';
+				}
+				else { show3.style.display = 'none';
+				}
+			}
+
+            // IF Customer Chooses Hybride Building
+			function HybrFunc() {
+
+				if ( choice4.checked === true )
+				   { show4.style.display = 'block';
+				   show1.style.display = 'none';
+				   show2.style.display = 'none';
+				   show3.style.display = 'none';
+				}
+				else { show4.style.display = 'none';
+				}
+			}
+
+	
+		</script>
 	</body>
 	<!--/BODY-->
-	<script>
-		var x;
-		if(id="residential"){
-
-		}
-	</script>
+	
 
 </html>
