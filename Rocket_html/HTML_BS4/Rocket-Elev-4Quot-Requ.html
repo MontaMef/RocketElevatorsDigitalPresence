@@ -222,31 +222,156 @@
 					
 					<h2>Request For A Quote</h2>
 				</div>
-				<div class="row">	
-					<form method="post" action="traitement.php">
-						<p>
-							Please specify the type of building (Select only one option):<br/>
-							<input type="radio" name="Type" value="Residential" id="Residential"/> <label for="Residential">Residential</label>
-							<input type="radio" name="Type" value="Commercial" id="Commercial" /><label for="Commercial">Commercial</label>
-							<input type="radio" name="Type" value="Corporate" id="Corporate" /><label for="Corporate">Corporate</label>
-							<input type="radio" name="Type" value="Hybride" id="Hybride" /><label for="Hybride">Hybride</label>
-						</p>
-					</form>
-					<script>
-						if(value = residential){
-							return
-							<form method="post" action="traitement.php">
-								<p>
-							       Please specify the type of building (Select only one option):<br/>
-							       <input type="radio" name="Type" value="Residential" id="Residential"/> <label for="Residential">Residential</label>
-							       <input type="radio" name="Type" value="Commercial" id="Commercial" /><label for="Commercial">Commercial</label>
-							       <input type="radio" name="Type" value="Corporate" id="Corporate" /><label for="Corporate">Corporate</label>
-							       <input type="radio" name="Type" value="Hybride" id="Hybride" /><label for="Hybride">Hybride</label>
-						        </p>
-					        </form>;
+				<div >	
+					
+					
+					
+					<p><b><u>Please specify the type of building (Select only one option):</u></b></p>	
+			
+					<select id=Select>
 
-						}
-					</script>
+						<option>--- Select ---</option>
+						<option value="residential">Residential</option>
+						<option value="commercial">Commercial</option>
+						<option value="corporate">Corporate</option>
+						<option value="hybride">Hybride</option>
+					
+					</select>
+					<form id="residential" class="type-of-building">
+						<p>
+						    </br></br><b><u>For residential building, please answer the following questions:</u></b><br/><br/>
+							
+							<label for="num-apart-buil">- The number of apartments in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-apart-buil"/><br><br>
+							
+							<label for="num-floors-buil">- The number of floors contained in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-floors-buil" /><br><br>
+							
+							<label for="num-base-buil">- The number of basements contained in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-base-buil" /><br><br>
+
+							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							
+							<input type="radio" name="Quality"  id="standard"/> 
+							<label for="standard">Standard</label>
+							
+							<input type="radio" name="Quality"  id="premuim" />
+							<label for="premuim">Premuim</label>
+							 
+							<input type="radio" name="Quality"  id="exceluim" />
+							<label for="exceluim">Exceluim</label>
+
+						</p>
+						
+					</form>
+
+					<form id="commercial" class="type-of-building">
+						<p>
+						    </br></br><b><u>For commercial building, please answer the following questions:</u></b><br/><br/>
+							
+							<label for="num-of-busi">- The number of distinct businesses</label>
+							<input min="0" type="number" name="Comm-buil" id="num-of-busi"/><br><br>
+							
+							<label for="num-floors-buil">- The number of floors contained in the building</label>
+							<input min="0" type="number" name="Comm-buil" id="num-floors-buil" /><br><br>
+
+							<label for="num-base-buil">- The number of basements contained in the building</label>
+							<input min="0" type="number" name="Comm-buil" id="num-base-buil" /><br><br>
+							
+							<label for="num-parc-avail">- The number of parking spaces available</label>
+							<input min="0" type="number" name="Comm-buil" id="num-parc-avail" /><br><br>
+
+							<label for="num-elev-buil">- The number of elevator cages to be deployed</label>
+							<input min="0" type="number" name="Comm-buil" id="num-elev-buil" /><br><br>
+
+							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							
+							<input type="radio" name="Quality"  id="standard"/> 
+							<label for="standard">Standard</label>
+							
+							<input type="radio" name="Quality"  id="premuim" />
+							<label for="premuim">Premuim</label>
+							 
+							<input type="radio" name="Quality"  id="exceluim" />
+							<label for="exceluim">Exceluim</label>
+							
+						</p>
+						
+					</form>
+
+					
+					<form id="corporate" class="type-of-building">
+						<p>
+						    </br></br><b><u>For corporate building, please answer the following questions:</u></b><br/><br/>
+							
+							<label for="num-of-comp">- The number of separate tenent companies</label>
+							<input min="0" type="number" name="corp-buil" id="num-of-comp"/><br><br>
+							
+							<label for="num-floors-buil">- The number of floors contained in the building</label>
+							<input min="0" type="number" name="corp-buil" id="num-floors-buil" /><br><br>
+
+							<label for="num-base-buil">- The number of basements contained in the building</label>
+							<input min="0" type="number" name="corp-buil" id="num-base-buil" /><br><br>
+							
+							<label for="num-parc-avail">- The number of parking spaces available</label>
+							<input min="0" type="number" name="corp-buil" id="num-parc-avail" /><br><br>
+
+							<label for="num-occu-floor">- The maximum number of occupants per floor</label>
+							<input min="0" type="number" name="corp-buil" id="num-occu-floor" /><br><br>
+
+							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							
+							<input type="radio" name="Quality"  id="standard"/> 
+							<label for="standard">Standard</label>
+							
+							<input type="radio" name="Quality"  id="premuim" />
+							<label for="premuim">Premuim</label>
+							 
+							<input type="radio" name="Quality"  id="exceluim" />
+							<label for="exceluim">Exceluim</label>
+							
+						</p>
+						
+					</form>
+
+					<form id="hybride" class="type-of-building">
+						<p>
+						    </br></br><b><u>For hybride building, please answer the following questions:</u></b><br/><br/>
+							
+							<label for="num-of-bus">- The number of distincts businesses</label>
+							<input min="0" type="number" name="hyb-buil" id="num-of-busi"/><br><br>
+							
+							<label for="num-floors-buil">- The number of floors contained in the building</label>
+							<input min="0" type="number" name="hyb-buil" id="num-floors-buil" /><br><br>
+
+							<label for="num-base-buil">- The number of basements contained in the building</label>
+							<input min="0" type="number" name="hyb-buil" id="num-base-buil" /><br><br>
+							
+							<label for="num-parc-avail">- The number of parking spaces available</label>
+							<input min="0" type="number" name="hyb-buil" id="num-parc-avail" /><br><br>
+
+							<label for="num-occu-floor">- The maximum number of occupants per floor</label>
+							<input min="0" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
+
+							<label for="num-occu-floor">- The number of hours of activity of the building (Max 24H)</label>
+							<input min="0" max="24" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
+
+							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							
+							<input type="radio" name="Quality"  id="standard"/> 
+							<label for="standard">Standard</label>
+							
+							<input type="radio" name="Quality"  id="premuim" />
+							<label for="premuim">Premuim</label>
+							 
+							<input type="radio" name="Quality"  id="exceluim" />
+							<label for="exceluim">Exceluim</label>
+							
+						</p>
+						
+					</form>
+
+					
 					
 					
 				</div>		
@@ -257,9 +382,8 @@
 			<!-- /Request For A Quote-->
 
 			
-
 			
-
+			
 			<!-- Section Contact US-->
 			<section id="contact">
 				<div class="container">
@@ -492,7 +616,7 @@
 						<div class="col-md-2">
 
 							<!-- Links -->
-							<h4 class="letter-spacing-1">EXPLORE Rocket Elevator</h4>
+							<h4 class="letter-spacing-1">EXPLORE Rocket Elevators</h4>
 							<ul class="footer-links list-unstyled">
 								<li><a href="#">Home</a></li>
 								<li><a href="#">Service</a></li>
@@ -599,5 +723,11 @@
 		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 	</body>
 	<!--/BODY-->
+	<script>
+		var x;
+		if(id="residential"){
+
+		}
+	</script>
 
 </html>
