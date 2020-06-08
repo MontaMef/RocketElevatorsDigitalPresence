@@ -40,6 +40,10 @@
 			#hybride{
 				display:none;
 			}
+			#showResult{
+				display:none;
+			}
+			
 		</style>
 	</head>
 	<!--/HEAD-->
@@ -252,35 +256,35 @@
 
 						
 					</form>
-					<form id="residential" class="type-of-building">
+					<form id="residential">
 						<p>
 						    </br></br><b><u>For residential building, please answer the following questions:</u></b><br/><br/>
 							
-							<label for="num-apart-buil">- The number of apartments in the building</label>
-							<input min="0" type="number" name="Resid-buil" id="num-apart-buil"/><br><br>
+							<label for="num-apart-buil-r">- The number of apartments in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-apart-buil-r"/><br><br>
 							
-							<label for="num-floors-buil">- The number of floors contained in the building</label>
-							<input min="0" type="number" name="Resid-buil" id="num-floors-buil" /><br><br>
+							<label for="num-floors-buil-r">- The number of floors contained in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-floors-buil-r" /><br><br>
 							
-							<label for="num-base-buil">- The number of basements contained in the building</label>
-							<input min="0" type="number" name="Resid-buil" id="num-base-buil" /><br><br>
+							<label for="num-base-buil-r">- The number of basements contained in the building</label>
+							<input min="0" type="number" name="Resid-buil" id="num-base-buil-r" /><br><br>
 
-							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							<b>- Between the following product's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard"/> 
+							<input type="radio" name="Quality"  id="standard-R" onclick="CalcResiFun()"/> 
 							<label for="standard">Standard</label>
 							
-							<input type="radio" name="Quality"  id="premuim" />
+							<input type="radio" name="Quality"  id="premuim-R" onclick="CalcResiFun()" />
 							<label for="premuim">Premuim</label>
 							 
-							<input type="radio" name="Quality"  id="exceluim" />
+							<input type="radio" name="Quality"  id="exceluim-R" onclick="CalcResiFun()" />
 							<label for="exceluim">Exceluim</label>
 
 						</p>
 						
 					</form>
 
-					<form id="commercial" class="type-of-building">
+					<form id="commercial">
 						<p>
 						    </br></br><b><u>For commercial building, please answer the following questions:</u></b><br/><br/>
 							
@@ -299,15 +303,15 @@
 							<label for="num-elev-buil">- The number of elevator cages to be deployed</label>
 							<input min="0" type="number" name="Comm-buil" id="num-elev-buil" /><br><br>
 
-							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							<b>- Between the following product's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard"/> 
+							<input type="radio" name="Quality"  id="standard-C" onclick="CalcCommFun()"/> 
 							<label for="standard">Standard</label>
 							
-							<input type="radio" name="Quality"  id="premuim" />
+							<input type="radio" name="Quality"  id="premuim-C" onclick="CalcCommFun()" />
 							<label for="premuim">Premuim</label>
 							 
-							<input type="radio" name="Quality"  id="exceluim" />
+							<input type="radio" name="Quality"  id="exceluim-C" onclick="CalcCommFun()" />
 							<label for="exceluim">Exceluim</label>
 							
 						</p>
@@ -315,41 +319,41 @@
 					</form>
 
 					
-					<form id="corporate" class="type-of-building">
+					<form id="corporate">
 						<p>
 						    </br></br><b><u>For corporate building, please answer the following questions:</u></b><br/><br/>
 							
 							<label for="num-of-comp">- The number of separate tenent companies</label>
-							<input min="0" type="number" name="corp-buil" id="num-of-comp"/><br><br>
+							<input min="0" type="number" name="corp-buil" id="num-of-comp-c"/><br><br>
 							
 							<label for="num-floors-buil">- The number of floors contained in the building</label>
-							<input min="0" type="number" name="corp-buil" id="num-floors-buil" /><br><br>
+							<input min="0" type="number" name="corp-buil" id="num-floors-buil-c" /><br><br>
 
 							<label for="num-base-buil">- The number of basements contained in the building</label>
-							<input min="0" type="number" name="corp-buil" id="num-base-buil" /><br><br>
+							<input min="0" type="number" name="corp-buil" id="num-base-buil-c" /><br><br>
 							
 							<label for="num-parc-avail">- The number of parking spaces available</label>
-							<input min="0" type="number" name="corp-buil" id="num-parc-avail" /><br><br>
+							<input min="0" type="number" name="corp-buil" id="num-parc-avail-c" /><br><br>
 
 							<label for="num-occu-floor">- The maximum number of occupants per floor</label>
-							<input min="0" type="number" name="corp-buil" id="num-occu-floor" /><br><br>
+							<input min="0" type="number" name="corp-buil" id="num-occu-floor-c" /><br><br>
 
-							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							<b>- Between the following product's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard"/> 
+							<input type="radio" name="Quality"  id="standard-Co" onclick="CalcCorpFun()"/> 
 							<label for="standard">Standard</label>
 							
-							<input type="radio" name="Quality"  id="premuim" />
+							<input type="radio" name="Quality"  id="premuim-Co" onclick="CalcCorpFun()"/>
 							<label for="premuim">Premuim</label>
 							 
-							<input type="radio" name="Quality"  id="exceluim" />
+							<input type="radio" name="Quality"  id="excelui-Co" onclick="CalcCorpFun()"/>
 							<label for="exceluim">Exceluim</label>
 							
 						</p>
 						
 					</form>
 
-					<form id="hybride" class="type-of-building">
+					<form id="hybride">
 						<p>
 						    </br></br><b><u>For hybride building, please answer the following questions:</u></b><br/><br/>
 							
@@ -371,20 +375,31 @@
 							<label for="num-occu-floor">- The number of hours of activity of the building (Max 24H)</label>
 							<input min="0" max="24" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
 
-							<b>- between the following psoduct's qualities, please choose one:</b><br>
+							<b>- Between the following psoduct's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard"/> 
+							<input type="radio" name="Quality"  id="standard" onclick="CalcCorpHybrFun()"/> 
 							<label for="standard">Standard</label>
 							
-							<input type="radio" name="Quality"  id="premuim" />
+							<input type="radio" name="Quality"  id="premuim" onclick="CalcCorpHybrFun()"/>
 							<label for="premuim">Premuim</label>
 							 
-							<input type="radio" name="Quality"  id="exceluim" />
+							<input type="radio" name="Quality"  id="exceluim" onclick="CalcCorpHybrFun()"/>
 							<label for="exceluim">Exceluim</label>
 							
 						</p>
 						
 					</form>
+
+					<!--SHOW Results-->
+					<div id ="showResult">
+						<p>Results:  Nb of Cages</p><p id = "Nb-Cages"></p>
+						<p>Elevators cost: </p><p id="elev-cost"></p>
+						<p>Installation cost:</p><p id="inst-cost"></p>
+						<p>Total cost:</p><p id="tota-cost"></p>
+					</div>
+					<!-- /SHOW Results-->
+
+					
 
 					
 					
@@ -739,6 +754,7 @@
 
 		<script>
 			
+			// PART ONE: Choose Between Four Types Of Building & Answer Questions.
 			// Declare Variables:
 			var choice1 = document.getElementById("resi-chec");
 			var choice2 = document.getElementById("comm-chec");
@@ -778,6 +794,7 @@
 				   
 				}
 			}
+			
 
             // IF Customer Chooses Corporate Building
 			function CorpFunc() {
@@ -804,6 +821,154 @@
 				else { show4.style.display = 'none';
 				}
 			}
+
+			// END PART ONE
+
+			// PART TWO: Calculation & Display Of Results.
+
+			// 1-Calculation & Display of Nb Cage, Elevators cost, Installation cost, Total Cost FOR COMMERCIAL BUILDNI.
+			function CalcCommFun(){
+				
+				document.getElementById("Nb-Cages").innerHTML = Math.ceil (document.getElementById("num-elev-buil").value); // Display Nb Cages
+				var x = Math.ceil (document.getElementById("num-elev-buil").value); // Call Nb Cages to insert into calculation
+				
+				if (document.getElementById("standard-C").checked === true){
+					
+					var y = x*7565;
+					var z = y*0.10;
+					var w = z + y;
+					document.getElementById("elev-cost").innerHTML = y; // Display Elev Cost
+					document.getElementById("inst-cost").innerHTML = z; // Display Inst Cost
+					document.getElementById("tota-cost").innerHTML = w; // Display Total cost
+				}
+				else if (document.getElementById("premuim-C").checked === true){
+
+					y = x*12345;
+					z = y*0.13;
+					w = z + y;
+					document.getElementById("elev-cost").innerHTML = y;
+					document.getElementById("inst-cost").innerHTML = z;
+					document.getElementById("tota-cost").innerHTML = w;
+					
+				}
+				else {
+
+					y = x*15400;
+					z = y*0.16;
+					w = z + y;
+					document.getElementById("elev-cost").innerHTML = y;
+					document.getElementById("inst-cost").innerHTML = z;
+					document.getElementById("tota-cost").innerHTML = w;
+				}
+
+				document.getElementById("showResult").style.display = 'block'; // Change style of id="showResult" From NONE to BLOCK --> Display Results 
+			}
+
+
+			// 2-Caculation of Nb Cages + Elevators cost + Installation cost FOR RESIDENTIAL BUILDNI.
+			
+			function CalcResiFun(){
+
+				var a = document.getElementById("num-floors-buil-r").value;  // Nb of floors
+				var b = document.getElementById("num-base-buil-r").value;  // Nb of basements
+				var c = document.getElementById("num-apart-buil-r").value;  // Nb of apartments
+
+				
+				var d = Math.ceil(c/(a-b));  // Average of apartments by floor(excluding basements)
+				var e = Math.ceil(d/6); // Nb cages for less than 20 levels
+				var f = Math.ceil((a-b)/20); // Nb of columns
+				var j = f*e;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
+				document.getElementById("Nb-Cages").innerHTML =j;
+
+
+				if (document.getElementById("standard-R").checked === true){
+					
+					y = j*7565;
+					z = y*0.10;
+					w  = y + z;
+					document.getElementById("elev-cost").innerHTML = y;
+					document.getElementById("inst-cost").innerHTML = z;
+					document.getElementById("tota-cost").innerHTML = w;
+				}
+				else if (document.getElementById("premuim-R").checked === true){
+
+					t = j*12345;
+					r = t*0.13;
+					s = t + r;
+					document.getElementById("elev-cost").innerHTML = t;
+					document.getElementById("inst-cost").innerHTML = r;
+					document.getElementById("tota-cost").innerHTML = s;
+				}
+				else {
+					
+					t = j*15400;
+					r = t*0.16;
+					s = t + r;
+					document.getElementById("elev-cost").innerHTML = t;
+					document.getElementById("inst-cost").innerHTML = r;
+					document.getElementById("tota-cost").innerHTML = s;
+				}
+				
+				document.getElementById("showResult").style.display = 'block';
+			}
+
+
+			// 2-Caculation of Nb Cages + Elevators cost + Installation cost FOR CORPORATE & HYBRIDE BUILDNI.
+			
+			function CalcCorpFun(){
+
+				var k = Math.ceil(document.getElementById("num-floors-buil-c").value);  // Nb of floors
+				var l = Math.ceil(document.getElementById("num-base-buil-c").value);  // Nb of basements
+				var m = Math.ceil(document.getElementById("num-occu-floor-c").value);  // Nb of max occupants per floor
+
+				
+				var n = m*k; // Total occupants = max-occ-floor x (Nb floor - Nb basements)
+				var o = Math.ceil(n/1000); // Nb cages for less than 20 levels
+				var p = Math.ceil(k/20); // Nb of columns
+				var q = Math.ceil(o/p); // Nb cages / Nb of columns
+				var i = q*p;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
+				document.getElementById("Nb-Cages").innerHTML = i;
+
+
+				if (document.getElementById("standard-Co").checked === true){
+					
+					y = i*7565;
+					z = y*0.10;
+					w  = y + z;
+					document.getElementById("elev-cost").innerHTML = y;
+					document.getElementById("inst-cost").innerHTML = z;
+					document.getElementById("tota-cost").innerHTML = w;
+				}
+				else if (document.getElementById("premuim-Co").checked === true){
+
+					t = i*12345;
+					r = t*0.13;
+					s = t + r;
+					document.getElementById("elev-cost").innerHTML = t;
+					document.getElementById("inst-cost").innerHTML = r;
+					document.getElementById("tota-cost").innerHTML = s;
+				}
+				else {
+					
+					t = i*15400;
+					r = t*0.16;
+					s = t + r;
+					document.getElementById("elev-cost").innerHTML = t;
+					document.getElementById("inst-cost").innerHTML = r;
+					document.getElementById("tota-cost").innerHTML = s;
+				}
+				
+				document.getElementById("showResult").style.display = 'block';
+			}
+
+
+
+
+
+
+
+
+
 
 	
 		</script>
