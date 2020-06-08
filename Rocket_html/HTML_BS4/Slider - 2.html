@@ -25,7 +25,7 @@
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-0.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -51,14 +51,206 @@
 	-->
 	<body class="smoothscroll enable-animation">
 
-		
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+							<li><b>Phone:</b> 1-800-565-2390</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
 
 
-		
+		<!-- 
+			OVERLAY NAVIGATION 
+			Outside of #wrapper
+			
+			CSS HEADER REQUIRED:
+			<link href="assets/css/header-0.css" rel="stylesheet" type="text/css" />
+		-->
+		<div id="topMain">
+			<div class="menu-content">
+				<div class="container">
+
+					<!-- menu close -->
+					<button id="menu_overlay_close">
+						<i class="fa fa-remove"></i>
+					</button><!-- /menu close -->
+
+					<div class="row">
+						<div class="col-md-8 col-12 offset-md-2">
+
+							<div class="row">
+								<div class="menu-list col-md-6 col-sm-6">
+
+									<ul class="list-unstyled font-raleway">
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- ABOUT -->
+											<a href="index.html">
+												ABOUT
+											</a>
+										</li>
+										<li><!-- BLOG -->
+											<a href="index.html">
+												BLOG
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a href="index.html">
+												SERVICES
+											</a>
+										</li>
+										<li><!-- CONTACT -->
+											<a href="index.html">
+												CONTACT
+											</a>
+										</li>
+									</ul>
+
+								</div>
+
+								<div class="text-right col-md-6 col-sm-6 hidden-xs-down">
+									<div class="letter-spacing-2 fs-16 fw-300">
+										<p>office@yourdomain.com</p>
+										<p>
+											Tel: 	1800-123-467<br />
+													1800-887-897
+										</p>
+										<p>
+											PO Box 21132<br>
+											Here Weare St, Melbourne<br>
+											Vivas 2355 Australia<br>
+										</p>
+										<p><!-- SOCAL ICONS -->
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+												<i class="icon-twitter"></i>
+												<i class="icon-twitter"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus" data-toggle="tooltip" data-placement="bottom" title="Google Plus">
+												<i class="icon-gplus"></i>
+												<i class="icon-gplus"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
+												<i class="icon-linkedin"></i>
+												<i class="icon-linkedin"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-flickr" data-toggle="tooltip" data-placement="bottom" title="Flickr">
+												<i class="icon-flickr"></i>
+												<i class="icon-flickr"></i>
+											</a>
+										</p><!-- /SOCAL ICONS -->
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- /OVERLAY NAVIGATION -->
 
 
 
-		
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+				<div id="topNav" class="container">
+
+					<!-- Logo -->
+					<a class="logo float-left" href="index.html">
+						<img src="assets/images/_smarty/logo_dark.png" alt="" />
+					</a>
+
+					<div class="float-right">
+
+							<!-- BUTTONS -->
+							<ul class="topNavBtn list-inline">
+
+								<li>
+									<button id="menu_overlay_open">
+										<span></span>
+									</button>
+								</li>
+
+							</ul><!-- /BUTTONS -->
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
 
 			<!-- 
 				SLIDER
