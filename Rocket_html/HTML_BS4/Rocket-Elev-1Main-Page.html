@@ -225,11 +225,11 @@
 					data-effect="slide|fade|coverflow"
 					data-autoplay="2500|false" 						(remove to disable autoplay)
 				-->
-				<div class="swiper-container " data-effect="slide" data-autoplay="7000" >
+				<div class="swiper-container swiper-container-horizontal" data-effect="slide" data-autoplay="7000" >
 					<div class="swiper-wrapper">
 
 						<!-- SLIDE 1 -->
-						<div class="swiper-slide" style="background-image: url('demo_files/images/1200x800/24-min.jpg');">
+						<div class= "swiper-slide swiper-slide-active" style="background-image: url('demo_files/images/1200x800/slide1.jpeg');">
 							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
 							
 							<div class="display-table">
@@ -239,10 +239,11 @@
 										<div class="row">
 											<div class="text-center col-md-8 col-12 offset-md-2">
 
-												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO ROCKET ELEVATORS</h1>
-												<h3 class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s"><b>ELEVATE SAFETY, SPEED AND STYLE.</b></h3>
-												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">Get A Quote</a>
-												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">Contact Us</a>
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.2s">WELCOME TO ROCKET ELEVATORS</h1>
+												<h3 class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.5s"><b>Elevate Safety, Speed and Style</b></h3>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.0s" target ="blank" href="file:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-4Quot-Requ.html">Get A Quote</a>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.0s" href="#contact">Contact Us</a>
+												
 
 											</div>
 										</div>
@@ -255,7 +256,7 @@
 						<!-- /SLIDE 1 -->
 
 						<!-- Slide 2 -->
-						<div class="swiper-slide" style="background-image: url('demo_files/images/1200x800/24-min.jpg');">
+						<div class="swiper-slide swiper-slide-next" style="background-image: url('demo_files/images/1200x800/slid2.jpeg');">
 							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
 							
 							<div class="display-table">
@@ -265,11 +266,10 @@
 										<div class="row">
 											<div class="text-center col-md-8 col-12 offset-md-2">
 
-												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO ROCKET ELEVATORS</h1>
-												<h3 class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s"><b>ELEVATE SAFETY, SPEED AND STYLE.</b></h3>
-												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">Get A Quote</a>
-												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">Contact Us</a>
-
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.2s">WELCOME TO ROCKET ELEVATORS</h1>
+												<h3 class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.5s"><b>Our Services for Residential buildings</b></h3>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.0s" target ="blank" href="file:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-2Resi-Buil.html">Residential Building</a>
+												
 											</div>
 										</div>
 							
@@ -283,7 +283,7 @@
 
 
 						<!-- SLIDE 3 -->
-						<div class="swiper-slide" style="background-image: url('demo_files/images/1200x800/10-min.jpg');">
+						<div class="swiper-slide " style ="background-image: url('demo_files/images/1200x800/slide3.jpeg');">
 							<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 							
 							<div class="display-table">
@@ -293,9 +293,10 @@
 										<div class="row">
 											<div class="text-center col-md-8 col-12 offset-md-2">
 
-												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO SMARTY</h1>
-												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.</p>
-												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">PURCHASE NOW</a>
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.2s">WELCOME TO ROCKET ELEVATORS</h1>
+												<h3 class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.5s"><b>Our Services Four Corporate & Commercial Building</b></h3>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.0s" target ="blank" href="ile:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-2Resi-Buil.html">Corporate & Commercial Building</a>
+												
 
 											</div>
 										</div>
@@ -310,7 +311,11 @@
 					</div>
 
 					<!-- Swiper Pagination -->
-					<div class="swiper-pagination"></div>
+					<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+						<span class="swiper-pagination-bullet swiper-pagination-clickable swiper-pagination-bullet "></span>
+						<span class="swiper-pagination-bullet swiper-pagination-bullets-active  "></span>
+						<span class="swiper-pagination-bullet "></span>
+					</div>
 
 					<!-- Swiper Arrows -->
 					<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
@@ -322,11 +327,12 @@
 
 
 
-			<!-- First Ribbon-->			
+			<!-- First Ribbon-->	
+			<br><br><br>		
 			<div id="readMore">
 				<div class="container">
 
-					<div class="divider double-line mt-80 mb-80"><!-- divider --></div>
+					
 					<div class="heading-title heading-dotted text-center">
 						<h2 id="Brief Description">Our Services</h2>
 					</div>
@@ -337,14 +343,14 @@
 							<div class="heading-title heading-border-bottom heading-color">
 								<h3 >Brief Description</h3>
 								<div class="ribbon"> 
-									<div class="ribbon-inner">*</div>
+									<div class="ribbon-inner"></div>
 								</div>	
 							</div>
 							
 							<p>After more than Four decades in the industry, Rocket Elevators learned how to design and fabricate exceptional
 								<b>elevators</b>. We involve our clients in every step of the process.
-								 From a raw idea to a perfect reality and from design to installation.<br>
-								
+								From a raw idea to a perfect reality and from design to installation.<br>
+							</p>	
 								
 							
 							
@@ -355,13 +361,13 @@
 							<div class="heading-title heading-border-bottom heading-color">
 								<h3>Residential Building</h3>
 								<div class="ribbon"> 
-									<div class="ribbon-inner">*</div>
+									<div class="ribbon-inner"></div>
 								</div>
 							</div>
 							<p>Excellent material's quality, Excellent installation, Excellent maintenance and Excellent price for our <b>Elevators</b>. 
 								We’re strongly proud of our product. We also able to charge less than our competitors thanks to our internal efficient
 								 administration and management.</p>
-							<a href="#">
+							<a target ="blank" href="file:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-2Resi-Buil.html">
 								Read
 								<!-- /word rotator -->
 								<span class="word-rotator" data-delay="2000">
@@ -379,14 +385,14 @@
 							<div class="heading-title heading-border-bottom heading-color">
 								<h3>Corporate Building</h3>
 								<div class="ribbon"> 
-									<div class="ribbon-inner">*</div>
+									<div class="ribbon-inner"></div>
 								</div>
 							</div>
 							<p>We’re known for our originality, quality, skills, competences, pricing, and our unlimited commitment to safety.
 								This mission is accomplished by product design, complete installation, adequate maintenance
 								and a responsability to our customers.</p>
 
-							<a href="#">
+							<a target = "blank" href="file:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-3Corp-Buil.html">
 								Read
 								<!-- /word rotator -->
 								<span class="word-rotator" data-delay="2000">
@@ -401,7 +407,7 @@
 						</div>
 						
 					</div>
-					<div class="divider double-line mt-80 mb-80"><!-- divider --></div>
+					<br><br><br>
 				</div>
 			</div>
 
@@ -439,14 +445,14 @@
 
 					<ul id="portfolio_filter" class="nav nav-pills mb-60">
 						<li class="filter active"><a data-filter="*" href="#">All</a></li>
-						<li class="filter"><a data-filter=".development" href="#">Prizes</a></li>
-						<li class="filter"><a data-filter=".photography" href="#">Residentials Projects</a></li>
-						<li class="filter"><a data-filter=".design" href="#">Corporates Projects</a></li>
+						<li class="filter"><a data-filter=".prize" href="#">Prizes</a></li>
+						<li class="filter"><a data-filter=".resi" href="#">Residentials Projects</a></li>
+						<li class="filter"><a data-filter=".corp" href="#">Corporates Projects</a></li>
 					</ul>
 
 					<div id="portfolio" class="clearfix portfolio-nogutter portfolio-isotope portfolio-isotope-6">
 
-						<div class="portfolio-item development"><!-- item -->
+						<div class="portfolio-item prize"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -455,25 +461,93 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/20-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/fastest-growing-company.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
 
 											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
+											Fastest Growing Company 2018
 
 										</span>
 									</span>
-									<img class="img-fluid" src="demo_files/images/720x400/20-min.jpg" width="600" height="399" alt="">
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/fastest-growing-company.jpg" width="600" height="399" alt="Fastest Growing Company">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+						<div class="portfolio-item prize"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/best-company.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Best Company 2016
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/best-company.jpg" width="600" height="399" alt="">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+					
+						<div class="portfolio-item prize"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/customer-satisfaction.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Customer Satisfaction 2014
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/customer-satisfaction.jpg" width="600" height="399" alt="">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+						<div class="portfolio-item prize"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/best-growth.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Business Growth 2013
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/best-growth.jpg" width="600" height="399" alt="">
 								</figure>
 							</div>
 
 						</div><!-- /item -->
 
 
-						<div class="portfolio-item photography"><!-- item -->
+						<div class="portfolio-item resi"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -482,25 +556,94 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/19-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/rb1.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
 
 											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
+											Moderas 2019
 
 										</span>
 									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/19-min.jpg" width="600" height="399" alt="">
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/rb1.jpg" width="600" height="399" alt="">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+						<div class="portfolio-item resi"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/rb2.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Capital 2018
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/rb2.jpg" width="600" height="399" alt="">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+						<div class="portfolio-item resi"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/rb3.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Largos 2017
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/rb3.jpg" width="600" height="399" alt="">
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+						<div class="portfolio-item resi"><!-- item -->
+
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/rb4.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											Choisy 2015
+
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/rb4.jpg" width="600" height="399" alt="">
 								</figure>
 							</div>
 
 						</div><!-- /item -->
 
 
-						<div class="portfolio-item design"><!-- item -->
+						
+
+						<div class="portfolio-item corp"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -509,216 +652,26 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/3-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/cb1.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/content_slider/3-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item design"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/720x400/12-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/12-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item development"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/13-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/13-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item photography"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/14-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/720x400/14-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item design"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/15-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/15-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item design"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/1-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/720x400/1-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item photography"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/11-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-
-									<!-- carousel -->
-									<div class="flexslider" data-arrowNav="false" data-slideshowSpeed="3000">
-										<ul class="slides">
-										
-											<!-- Slide 1 -->
-											<li>
-												<a href="#">
-													<img class="img-fluid" src="demo_files/images/mockups/600x399/8-min.jpg" width="600" height="399" alt="">
-												</a>
-											</li>
 											
-											<!-- Slide 2 -->
-											<li>
-												<a href="#">
-													<img class="img-fluid" src="demo_files/images/mockups/600x399/9-min.jpg" width="600" height="399" alt="">
-												</a>
-											</li>
-											
-											<!-- Slide 3 -->
-											<li>
-												<a href="#">
-													<img class="img-fluid" src="demo_files/images/mockups/600x399/10-min.jpg" width="600" height="399" alt="">
-												</a>
-											</li>
 
-										</ul>
-									</div>
-									<!-- /carousel -->
+											<!-- details -->
+											Miramara 2018
 
-									</figure>
+										</span>
+									</span>
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/cb1.jpg" width="600" height="399" alt="">
+								</figure>
 							</div>
 
 						</div><!-- /item -->
 
+						
 
-						<div class="portfolio-item design"><!-- item -->
+
+						<div class="portfolio-item corp"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -727,25 +680,24 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/16-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/cb2.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
 
 											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
+											Gallery De Jarry 2018
 
 										</span>
 									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/16-min.jpg" width="600" height="399" alt="">
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/cb2.jpg" width="600" height="399" alt="">
 								</figure>
 							</div>
 
 						</div><!-- /item -->
 
 
-						<div class="portfolio-item design"><!-- item -->
+						
+						<div class="portfolio-item corp"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -754,52 +706,22 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/720x400/4-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/cb3.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
 
 											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
+											X-Center 2017
 
 										</span>
 									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/4-min.jpg" width="600" height="399" alt="">
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/cb3.jpg" width="600" height="399" alt="">
 								</figure>
 							</div>
 
 						</div><!-- /item -->
 
-
-						<div class="portfolio-item development"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/5-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/5-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item photography"><!-- item -->
+						<div class="portfolio-item corp"><!-- item -->
 
 							<div class="item-box">
 								<figure>
@@ -808,72 +730,16 @@
 										<span class="inner">
 
 											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/6-min.jpg" data-plugin-options='{"type":"image"}'>
+											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/cb4.jpg" data-plugin-options='{"type":"image"}'>
 												<span class="fa fa-plus fs-20"></span>
 											</a>
 
 											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
+											La Rosa 2016
 
 										</span>
 									</span>
-									<img class="img-fluid" src="demo_files/images/720x400/6-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item design"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/7-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/mockups/600x399/7-min.jpg" width="600" height="399" alt="">
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-
-						<div class="portfolio-item design"><!-- item -->
-
-							<div class="item-box">
-								<figure>
-									<span class="item-hover">
-										<span class="overlay dark-5"></span>
-										<span class="inner">
-
-											<!-- lightbox -->
-											<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/10-min.jpg" data-plugin-options='{"type":"image"}'>
-												<span class="fa fa-plus fs-20"></span>
-											</a>
-
-											<!-- details -->
-											<a class="ico-rounded" href="portfolio-single-slider.html">
-												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-											</a>
-
-										</span>
-									</span>
-									<img class="img-fluid" src="demo_files/images/720x400/10-min.jpg" width="600" height="399" alt="">
+									<img class="img-fluid" src="demo_files/images/mockups/600x399/cb4.jpg" width="600" height="399" alt="">
 								</figure>
 							</div>
 
@@ -926,10 +792,10 @@
 
 			
 			<!--Section News double-line  mt-80 mb-80"-->
+			<br><br><br>
 			<div id="news">
 				<div class="container">
-					<div class="divider"><!-- divider --></div>
-
+					
 					<div class="heading-title heading-dotted text-center">
 						<h2 id = "News">Recent News</h2>
 					</div>
@@ -968,12 +834,7 @@
 									<i class="fa fa-calendar"></i> 
 									02 June 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
@@ -990,12 +851,7 @@
 									<i class="fa fa-calendar"></i> 
 									21 mai 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
@@ -1013,12 +869,7 @@
 									<i class="fa fa-calendar"></i> 
 									02 June 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
@@ -1034,12 +885,7 @@
 									<i class="fa fa-calendar"></i> 
 									27 Mai 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
@@ -1054,12 +900,7 @@
 									<i class="fa fa-calendar"></i> 
 									08 Mai 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
@@ -1074,12 +915,7 @@
 									<i class="fa fa-calendar"></i> 
 									18 Mai 2020
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						
