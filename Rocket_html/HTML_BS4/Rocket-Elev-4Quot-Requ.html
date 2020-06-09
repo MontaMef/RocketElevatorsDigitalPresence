@@ -52,6 +52,14 @@
 				display:none;
 			}
 
+			#showResult-Corp{
+				display:none;
+			}
+
+			#showResult-Hybr{
+				display:none;
+			}
+
 			#NbCages-Comm{
 				
 				background-color:blue;
@@ -67,6 +75,23 @@
 				text-align:center;
 				text-decoration:underline;
 			}
+
+			#NbCages-Corp{
+				
+				background-color:blue;
+				color:white;
+				text-align:center;
+				text-decoration:underline;
+			}
+
+			#NbCages-Hybr{
+				
+				background-color:blue;
+				color:white;
+				text-align:center;
+				text-decoration:underline;
+			}
+
 
 			#showResult{
 				background-color:blue;
@@ -302,7 +327,7 @@
 								<h4 id="NbCages-Resi"></h4><br>
 
 								<b>- Between the following product's qualities, please choose one:</b><br>
-							
+								
 								<input type="radio" name="Quality"  id="standard-R" onclick="CalcResiFun()"/> 
 								<label for="standard">Standard</label>
 							
@@ -311,6 +336,8 @@
 							 
 								<input type="radio" name="Quality"  id="excelium-R" onclick="CalcResiFun()" />
 								<label for="exceluim">Excelium</label>
+								
+
 							</div>
 							
 
@@ -379,16 +406,23 @@
 							<label for="num-occu-floor">- The maximum number of occupants per floor </label>
 							<input min="0" type="number" name="corp-buil" value="num-occu-floor-c" id="num-occu-floor-c" onchange="CalcCorpFun(this.value)"/><br><br>
 
-							<b>- Between the following product's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard-Co" onclick="CalcCorpFun()"/> 
-							<label for="standard">Standard</label>
+							<div id="showResult-Corp">
+
+								<h4 id="NbCages-Corp"></h4><br>
+
+								<b>- Between the following product's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="premium-Co" onclick="CalcCorpFun()"/>
-							<label for="premuim">Premium</label>
+								<input type="radio" name="Quality"  id="standard-Co" onclick="CalcCorpFun()"/> 
+								<label for="standard">Standard</label>
+							
+								<input type="radio" name="Quality"  id="premium-Co" onclick="CalcCorpFun()"/>
+								<label for="premuim">Premium</label>
 							 
-							<input type="radio" name="Quality"  id="excelium-Co" onclick="CalcCorpFun()"/>
-							<label for="exceluim">Excelium</label>
+								<input type="radio" name="Quality"  id="excelium-Co" onclick="CalcCorpFun()"/>
+								<label for="exceluim">Excelium</label>
+								</div>
+							
 							
 						</p>
 						
@@ -402,31 +436,35 @@
 							<input min="0" type="number" name="hyb-buil" id="num-of-busi"/><br><br>
 							
 							<label for="num-floors-buil">- The number of floors contained in the building</label>
-							<input min="0" type="number" name="hyb-buil" id="num-floors-buil" /><br><br>
+							<input min="0" type="number" value ="num-floors-buil-h" name="hyb-buil" id="num-floors-buil-h" onchange="CalcHybrFun(this.value)" /><br><br>
 
 							<label for="num-base-buil">- The number of basements contained in the building</label>
-							<input min="0" type="number" name="hyb-buil" id="num-base-buil" /><br><br>
+							<input min="0" type="number" value="num-base-buil-h" name="hyb-buil" id="num-base-buil-h" onchange="CalcHybrFun(this.value)" /><br><br>
 							
 							<label for="num-parc-avail">- The number of parking spaces available</label>
 							<input min="0" type="number" name="hyb-buil" id="num-parc-avail" /><br><br>
 
 							<label for="num-occu-floor">- The maximum number of occupants per floor</label>
-							<input min="0" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
+							<input min="0" type="number" value="num-occu-floor-h" name="hyb-buil" id="num-occu-floor-h" onchange="CalcHybrFun(this.value)"/><br><br>
 
 							<label for="num-occu-floor">- The number of hours of activity of the building (Max 24H)</label>
 							<input min="0" max="24" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
 
-							<b>- Between the following psoduct's qualities, please choose one:</b><br>
+							<div id="showResult-Hybr">
+
+								<h4 id="NbCages-Hybr"></h4><br>
+								<b>- Between the following psoduct's qualities, please choose one:</b><br>
 							
-							<input type="radio" name="Quality"  id="standard" onclick="CalcCorpHybrFun()"/> 
-							<label for="standard">Standard</label>
+								<input type="radio" name="Quality"  id="standard-h" onclick="CalcHybrFun()"/> 
+								<label for="standard">Standard</label>
 							
-							<input type="radio" name="Quality"  id="premium" onclick="CalcCorpHybrFun()"/>
-							<label for="premuim">Premium</label>
+								<input type="radio" name="Quality"  id="premium-h" onclick="CalcHybrFun()"/>
+								<label for="premuim">Premium</label>
 							 
-							<input type="radio" name="Quality"  id="excelium" onclick="CalcCorpHybrFun()"/>
-							<label for="exceluim">Excelium</label>
-							
+								<input type="radio" name="Quality"  id="excelium-h" onclick="CalcHybrFun()"/>
+								<label for="exceluim">Excelium</label>
+
+							</div>
 						</p>
 						
 					</form>
@@ -873,6 +911,7 @@
 
 			// PART TWO: Calculation & Display Of Results.
 
+
 			// 1-Calculation & Display of Nb Cage, Elevators cost, Installation cost, Total Cost FOR COMMERCIAL BUILDING.
 			function CalcCommFun(){
 				
@@ -917,7 +956,8 @@
 			}
 
 
-			// 2-Caculation of Nb Cages + Elevators cost + Installation cost FOR RESIDENTIAL BUILDNI.
+
+			// 2-Caculation of Nb Cages + Elevators cost + Installation cost FOR RESIDENTIAL BUILDING
 			
 			function CalcResiFun(){
 
@@ -970,7 +1010,7 @@
 			}
 
 
-			// 2-Caculation of Nb Cages + Elevators cost + Installation cost FOR CORPORATE & HYBRIDE BUILDNI.
+			// 3-Caculation of Nb Cages + Elevators cost + Installation cost FOR CORPORATE BUILDING
 			
 			function CalcCorpFun(){
 
@@ -984,7 +1024,9 @@
 				var p = Math.ceil(k/20); // Nb of columns
 				var q = Math.ceil(o/p); // Nb cages / Nb of columns
 				var i = q*p;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
-				document.getElementById("Nb-Cages").innerHTML = i;
+				
+				document.getElementById("NbCages-Corp").innerHTML = "Number of elevators recommended: " + i;     // Send value of Nb of cages into HTML
+				document.getElementById("showResult-Corp").style.display = 'block';                              // Display Nb of cages into HTML
 
 
 				if (document.getElementById("standard-Co").checked === true){
@@ -992,27 +1034,83 @@
 					y = i*7565;
 					z = y*0.10;
 					w  = y + z;
-					document.getElementById("elev-cost").innerHTML = y;
-					document.getElementById("inst-cost").innerHTML = z;
-					document.getElementById("tota-cost").innerHTML = w;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 7565;
+					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + y;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ "+ z;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + w;
 				}
 				else if (document.getElementById("premium-Co").checked === true){
 
 					t = i*12345;
 					r = t*0.13;
 					s = t + r;
-					document.getElementById("elev-cost").innerHTML = t;
-					document.getElementById("inst-cost").innerHTML = r;
-					document.getElementById("tota-cost").innerHTML = s;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 12345;
+					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + t;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + s;
 				}
 				else if(document.getElementById("excelium-Co").checked === true){
 					
 					t = i*15400;
 					r = t*0.16;
 					s = t + r;
-					document.getElementById("elev-cost").innerHTML = t;
-					document.getElementById("inst-cost").innerHTML = r;
-					document.getElementById("tota-cost").innerHTML = s;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 15400;
+					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + t;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +s;
+				}
+				
+				document.getElementById("showResult").style.display = 'block';
+			}
+
+			// 4-Caculation of Nb Cages + Elevators cost + Installation cost FOR HYBRIDE BUILDING
+			
+			function CalcHybrFun(){
+
+				k = Math.ceil(document.getElementById("num-floors-buil-h").value);  // Nb of floors
+				l = Math.ceil(document.getElementById("num-base-buil-h").value);  // Nb of basements
+				m = Math.ceil(document.getElementById("num-occu-floor-h").value);  // Nb of max occupants per floor
+
+				
+				n = m*k; // Total occupants = max-occ-floor x (Nb floor - Nb basements)
+				o = Math.ceil(n/1000); // Nb cages for less than 20 levels
+				p = Math.ceil(k/20); // Nb of columns
+				q = Math.ceil(o/p); // Nb cages / Nb of columns
+				i = q*p;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
+				
+				document.getElementById("NbCages-Hybr").innerHTML = "Number of elevators recommended: " + i;
+				document.getElementById("showResult-Hybr").style.display = 'block'; 
+
+
+				if (document.getElementById("standard-h").checked === true){
+					
+					y = i*7565;
+					z = y*0.10;
+					w  = y + z;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 7565;
+					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + y;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ "+ z;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + w;
+				}
+				else if (document.getElementById("premium-h").checked === true){
+
+					t = i*12345;
+					r = t*0.13;
+					s = t + r;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 12345;
+					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + t;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + s;
+				}
+				else if(document.getElementById("excelium-h").checked === true){
+					
+					t = i*15400;
+					r = t*0.16;
+					s = t + r;
+					document.getElementById("unit-price").innerHTML = "Price per one elevator: $ " + 15400;
+					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + t;
+					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
+					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +s;
 				}
 				
 				document.getElementById("showResult").style.display = 'block';
