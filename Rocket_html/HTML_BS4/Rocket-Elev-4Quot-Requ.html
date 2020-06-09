@@ -97,7 +97,7 @@
 				background-color:blue;
 				display:none;
 			}
-			
+
 		</style>
 	</head>
 	<!--/HEAD-->
@@ -311,7 +311,8 @@
 					</form>
 					<form id="residential">
 						<p>
-						    </br></br><b><u>For residential building, please answer the following questions:</u></b><br/><br/>
+							</br></br><b><u>For residential building, please answer the following questions:</u></b><br/>
+							<b>(Click on ENTER or Tab each time)</b><br/><br/>
 							
 							<label for="num-apart-buil-r">- The number of apartments in the building</label>
 							<input min="0" type="number" name="Resid-buil" value="num-apart-buil-r" id="num-apart-buil-r" onchange="CalcResiFun(this.value)"/><br><br>
@@ -320,7 +321,7 @@
 							<input min="0" type="number" name="Resid-buil" value="num-floors-buil-r" id="num-floors-buil-r" onchange="CalcResiFun(this.value)"/><br><br>
 							
 							<label for="num-base-buil-r">- The number of basements contained in the building</label>
-							<input min="0" type="number" name="Resid-buil" value="num-base-buil-r" id="num-base-buil-r" onchange="CalcResiFun(this.value)"/><br><br>
+							<input default ="1000" min="0" type="number" name="Resid-buil" value="num-base-buil-r" id="num-base-buil-r" onchange="CalcResiFun(this.value)"/><br><br>
 
 							<div id="showResult-Resi">
 								
@@ -347,7 +348,8 @@
 
 					<form id="commercial">
 						<p>
-						    </br></br><b><u>For commercial building, please answer the following questions:</u></b><br/><br/>
+							</br></br><b><u>For commercial building, please answer the following questions:</u></b><br/>
+							<b>(Click on ENTER or Tab each time)</b><br/><br/>
 							
 							<label for="num-of-busi">- The number of distinct businesses</label>
 							<input min="0" type="number" name="Comm-buil" id="num-of-busi"/><br><br>
@@ -379,17 +381,18 @@
 								<input type="radio" name="Quality"  id="excelium-C" onclick="CalcCommFun()" />
 								<label for="exceluim">Excelium</label>
 							</div>
-
-							
 							
 						</p>
 						
 					</form>
 
 					
+
+					
 					<form id="corporate">
 						<p>
-						    </br></br><b><u>For corporate building, please answer the following questions:</u></b><br/><br/>
+							</br></br><b><u>For corporate building, please answer the following questions:</u></b><br/>
+						    <b>(Click on ENTER or Tab each time)</b><br/><br/>
 							
 							<label for="num-of-comp">- The number of separate tenent companies</label>
 							<input min="0" type="number" name="corp-buil" id="num-of-comp-c"/><br><br>
@@ -430,7 +433,8 @@
 
 					<form id="hybride">
 						<p>
-						    </br></br><b><u>For hybride building, please answer the following questions:</u></b><br/><br/>
+							</br></br><b><u>For hybride building, please answer the following questions:</u></b><br/>
+							<b>(Click on ENTER or Tab each time)</b><br/><br/>
 							
 							<label for="num-of-bus">- The number of distincts businesses</label>
 							<input min="0" type="number" name="hyb-buil" id="num-of-busi"/><br><br>
@@ -448,7 +452,7 @@
 							<input min="0" type="number" value="num-occu-floor-h" name="hyb-buil" id="num-occu-floor-h" onchange="CalcHybrFun(this.value)"/><br><br>
 
 							<label for="num-occu-floor">- The number of hours of activity of the building (Max 24H)</label>
-							<input min="0" max="24" type="number" name="hyb-buil" id="num-occu-floor" /><br><br>
+							<input min="0" max="24" type="number" name="hyb-buil" id="act-hour-h" /><br><br>
 
 							<div id="showResult-Hybr">
 
@@ -476,9 +480,18 @@
 						<h4 id="elev-cost" style="color:white; text-align:center;"></h4>
 						<h4 id="inst-cost" style="color:white; text-align:center;"></h4>
 						<h4 id="tota-cost" style="color:white; text-align:center;"></h4>
-						<br>
+						<br><br>
 					</div>
 					<!-- /SHOW Results-->
+					
+					<!-- Go Back to the menu BUTTON-->
+					<div id="GoBack" style="display:none; background-color: white; text-align:center ;">
+
+						<h4><a href="file:///C:/Users/monta/Desktop/Rocket%20Elevators/GenesisProgram/Rocket_html/HTML_BS4/Rocket-Elev-4Quot-Requ.html" >GO BACK TO THE MENU OF BUILDING TYPE</a></h4>
+
+					</div>
+					<!-- ?Go Back to the menu BUTTON-->
+
 
 					
 
@@ -929,6 +942,9 @@
 					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + y;                // Display Elev Cost
 					document.getElementById("inst-cost").innerHTML ="Installation cost: $ " + z;             // Display Inst Cost
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ "+ w;                    // Display Total cost
+					
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';                    
 				}
 				else if (document.getElementById("premium-C").checked === true){
 
@@ -939,6 +955,9 @@
 					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + y;
 					document.getElementById("inst-cost").innerHTML ="Installation cost: $ " + z;
 					document.getElementById("tota-cost").innerHTML ="Total cost: $ " + w;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block'; 
 					
 				}
 				else if(document.getElementById("excelium-C").checked === true){
@@ -950,10 +969,13 @@
 					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + y;
 					document.getElementById("inst-cost").innerHTML ="Installation cost: $ " + z;
 					document.getElementById("tota-cost").innerHTML ="Total cost: $ " + w;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block'; 
 				}
 
-				document.getElementById("showResult").style.display = 'block';               // Change style of id="showResult" From NONE to BLOCK --> Display Results 
 			}
+
 
 
 
@@ -971,9 +993,11 @@
 				var f = Math.ceil((a-b)/20); // Nb of columns
 				var j = f*e;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
 				
-				document.getElementById("NbCages-Resi").innerHTML = "Number of elevators recommended: " + j ;       // Send value of Nb of cages into HTML
-				document.getElementById("showResult-Resi").style.display = 'block';                                 // Display Nb of cages into HTML
+				document.getElementById("NbCages-Resi").innerHTML = "Number of elevators recommended: " + j ;       // Send value of Nb of cages into HTML                             
 
+				if(document.getElementById("num-base-buil-r").value != 0){                   //Show only one value is different than zero
+					document.getElementById("showResult-Resi").style.display = 'block';      // Display Nb of cages into HTML
+				}
 
 				if (document.getElementById("standard-R").checked === true){
 					
@@ -984,6 +1008,9 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + y;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " +z;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +w;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if (document.getElementById("premium-R").checked === true){
 
@@ -994,6 +1021,9 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " +r;
 					document.getElementById("tota-cost").innerHTML ="Total cost: $ " + s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if(document.getElementById("excelium-R").checked === true) {
 					
@@ -1004,9 +1034,11 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " +t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " +r;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				
-				document.getElementById("showResult").style.display = 'block';
 			}
 
 
@@ -1026,7 +1058,11 @@
 				var i = q*p;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
 				
 				document.getElementById("NbCages-Corp").innerHTML = "Number of elevators recommended: " + i;     // Send value of Nb of cages into HTML
-				document.getElementById("showResult-Corp").style.display = 'block';                              // Display Nb of cages into HTML
+				
+				if(document.getElementById("num-occu-floor-c").value != 0){                                      // Show only when value is different tha zero
+					document.getElementById("showResult-Corp").style.display = 'block';                              // Display Nb of cages into HTML
+				}
+				
 
 
 				if (document.getElementById("standard-Co").checked === true){
@@ -1038,6 +1074,9 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + y;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ "+ z;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + w;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if (document.getElementById("premium-Co").checked === true){
 
@@ -1048,6 +1087,9 @@
 					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if(document.getElementById("excelium-Co").checked === true){
 					
@@ -1058,9 +1100,11 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				
-				document.getElementById("showResult").style.display = 'block';
 			}
 
 			// 4-Caculation of Nb Cages + Elevators cost + Installation cost FOR HYBRIDE BUILDING
@@ -1079,7 +1123,11 @@
 				i = q*p;  // Nb Cages = (Nb cages for less than 20 levels) x Nb of columns
 				
 				document.getElementById("NbCages-Hybr").innerHTML = "Number of elevators recommended: " + i;
-				document.getElementById("showResult-Hybr").style.display = 'block'; 
+
+				if(document.getElementById("num-occu-floor-h").value != 0){                                            // Show field only when value is different than zero
+				   document.getElementById("showResult-Hybr").style.display = 'block';                          // Display Nb of cages into HTML
+				}
+				
 
 
 				if (document.getElementById("standard-h").checked === true){
@@ -1091,6 +1139,9 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + y;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ "+ z;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + w;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if (document.getElementById("premium-h").checked === true){
 
@@ -1101,6 +1152,9 @@
 					document.getElementById("elev-cost").innerHTML ="Elevators cost: $ " + t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " + s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				else if(document.getElementById("excelium-h").checked === true){
 					
@@ -1111,9 +1165,12 @@
 					document.getElementById("elev-cost").innerHTML = "Elevators cost: $ " + t;
 					document.getElementById("inst-cost").innerHTML = "Installation cost: $ " + r;
 					document.getElementById("tota-cost").innerHTML = "Total cost: $ " +s;
+
+					document.getElementById("showResult").style.display = 'block';              
+					document.getElementById("GoBack").style.display = 'block';
 				}
 				
-				document.getElementById("showResult").style.display = 'block';
+				
 			}
 
 
