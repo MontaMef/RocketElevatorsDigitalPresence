@@ -15313,21 +15313,6 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 
 }
 
-/**  How to fix a botton on image slide for image slider - feature-slider-owl-backslide.html **/
-.Add-link {
-position:relative;
-}
 
-.link-left {
-	position:absolute;
-	bottom:100px;
-	left:-30%;
-}
-
-.link-right {
-	position:absolute;
-	bottom:140px;
-	left:30%;
-}
 
 

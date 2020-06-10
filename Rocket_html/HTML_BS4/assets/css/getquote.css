@@ -1,0 +1,70 @@
+
+#residential{
+    display:none;
+}
+
+#commercial{
+    display:none;
+}
+
+#corporate{
+    display:none;
+}
+
+#hybride{
+    display:none;
+}
+
+#showResult-Comm{
+    display:none;
+}
+
+#showResult-Resi{
+    display:none;
+}
+
+#showResult-Corp{
+    display:none;
+}
+
+#showResult-Hybr{
+    display:none;
+}
+
+#NbCages-Comm{
+    
+    background-color:#0b64a0;
+    color:white;
+    text-align:center;
+    text-decoration:underline;
+}
+
+#NbCages-Resi{
+    
+    background-color:#0b64a0;
+    color:white;
+    text-align:center;
+    text-decoration:underline;
+}
+
+#NbCages-Corp{
+    
+    background-color:#0b64a0;
+    color:white;
+    text-align:center;
+    text-decoration:underline;
+}
+
+#NbCages-Hybr{
+    
+    background-color:#0b64a0;
+    color:white;
+    text-align:center;
+    text-decoration:underline;
+}
+
+
+#showResult{
+    background-color:#0b64a0;
+    display:none;
+}
